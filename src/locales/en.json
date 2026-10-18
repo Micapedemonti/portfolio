@@ -40,8 +40,10 @@
       "landing": "LANDING"
     },
     "tryLive": "Try it live",
+    "viewRepo": "View repo",
     "repoSoon": "Repo coming soon",
     "cursor": "TRY IT",
+    "cursorRepo": "VIEW",
     "items": {
       "miProfe": {
         "kicker": "LISTENING AGENT",

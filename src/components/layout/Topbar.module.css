@@ -24,7 +24,6 @@
 }
 @media (prefers-reduced-motion: reduce) { .availability i { animation: none; } }
 
-/* ---------- CV e idioma ---------- */
 .actions { display: flex; gap: 10px; align-items: center; }
 .pill {
   font: 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted);

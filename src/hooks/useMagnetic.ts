@@ -2,7 +2,6 @@ import { useEffect, type RefObject } from 'react';
 import { lerp } from '@/lib/math';
 import { hasFinePointer, prefersReducedMotion } from '@/lib/media';
 
-/** El elemento sigue un poco al puntero mientras está encima. */
 export function useMagnetic(ref: RefObject<HTMLElement | null>): void {
   useEffect(() => {
     const el = ref.current;

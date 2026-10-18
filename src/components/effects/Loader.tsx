@@ -7,13 +7,10 @@ import styles from './Loader.module.css';
 const DURATION = 1300;
 
 interface LoaderProps {
-  /** Se llama cuando la cortina empieza a subir: momento de revelar el contenido. */
   onReveal: () => void;
-  /** Se llama cuando la animación de salida terminó: se puede desmontar. */
   onExit: () => void;
 }
 
-/** Pantalla de carga con contador 0–100 y cortina de salida. */
 export function Loader({ onReveal, onExit }: LoaderProps) {
   const countRef = useRef<HTMLSpanElement>(null);
   const barRef = useRef<HTMLElement>(null);

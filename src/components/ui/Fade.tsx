@@ -9,7 +9,6 @@ interface FadeProps {
   as?: 'div' | 'p' | 'span';
 }
 
-/** Aparece con fade y un leve desplazamiento al entrar en pantalla. */
 export function Fade({ children, delay = 0, className, as: Tag = 'div' }: FadeProps) {
   const [ref, visible] = useReveal<HTMLElement>();
   return (

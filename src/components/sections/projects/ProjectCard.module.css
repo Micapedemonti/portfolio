@@ -2,7 +2,6 @@
   display: grid; grid-template-columns: 1.05fr .95fr; min-height: 420px; border-top: 1px solid var(--line);
   padding: 24px 0; gap: clamp(24px, 5vw, 80px); align-items: center; position: relative;
 }
-/* Línea acid que se dibuja sobre el borde al entrar */
 .project::before {
   content: ''; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--acid);
   transform: scaleX(0); transform-origin: left; transition: transform 1.2s var(--expo);

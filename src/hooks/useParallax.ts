@@ -1,7 +1,6 @@
 import { useEffect, type RefObject } from 'react';
 import { prefersReducedMotion } from '@/lib/media';
 
-/** Desplaza `layer` según la posición de `frame` en el viewport. */
 export function useParallax(
   frame: RefObject<HTMLElement | null>,
   layer: RefObject<HTMLElement | null>,

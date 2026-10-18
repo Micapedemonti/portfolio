@@ -12,7 +12,6 @@ interface ProjectArtProps {
   revealed: boolean;
 }
 
-/** Ilustración del proyecto: fondo con parallax, decoración y panel 3D. */
 export function ProjectArt({ project, revealed }: ProjectArtProps) {
   const { t } = useTranslation();
   const frameRef = useRef<HTMLDivElement>(null);
@@ -29,7 +28,7 @@ export function ProjectArt({ project, revealed }: ProjectArtProps) {
       ref={frameRef}
       className={cx(styles.frame, revealed && styles.revealed, href && styles.clickable)}
       data-cursor="label"
-      data-label={t('projects.cursor')}
+      data-label={project.linkKind === 'repo' ? t('projects.cursorRepo') : t('projects.cursor')}
       onClick={href ? () => window.open(href, '_blank', 'noopener,noreferrer') : undefined}
     >
       <Art bgRef={bgRef} panelRef={panelRef} />

@@ -6,10 +6,6 @@ import styles from './Cursor.module.css';
 
 const INTERACTIVE = 'a, button, [data-cursor]';
 
-/**
- * Cursor custom con inercia. Crece sobre elementos interactivos y muestra
- * una etiqueta sobre los que tienen data-cursor="label" + data-label.
- */
 export function Cursor() {
   const dotRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
@@ -31,7 +27,6 @@ export function Cursor() {
     };
     id = requestAnimationFrame(loop);
 
-    // Delegación: un listener para toda la página, funciona con lo que React monte después.
     const onOver = (e: PointerEvent) => {
       const target = e.target instanceof Element ? e.target : null;
       const labelled = target?.closest<HTMLElement>('[data-cursor="label"]');

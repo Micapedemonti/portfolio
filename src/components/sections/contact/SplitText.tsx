@@ -6,10 +6,6 @@ interface SplitTextProps {
   charClassName: string;
 }
 
-/**
- * Divide cada línea en letras con un índice (--c) continuo entre líneas,
- * para que la animación entre en cascada letra por letra.
- */
 export function SplitText({ lines, lineClassName, charClassName }: SplitTextProps) {
   let index = 0;
   return (

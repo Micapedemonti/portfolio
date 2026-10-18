@@ -1,6 +1,5 @@
 import { useEffect, type RefObject } from 'react';
 
-/** Escala horizontalmente `bar` según cuánto se ha scrolleado la página. */
 export function useScrollProgress(bar: RefObject<HTMLElement | null>): void {
   useEffect(() => {
     const el = bar.current;

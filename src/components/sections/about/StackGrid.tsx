@@ -4,7 +4,6 @@ import { useReveal } from '@/hooks/useReveal';
 import { cssVars, cx } from '@/lib/css';
 import styles from './StackGrid.module.css';
 
-/** Grilla de tecnologías que aparece en cascada. */
 export function StackGrid() {
   const { t } = useTranslation();
   const [ref, revealed] = useReveal<HTMLDivElement>();

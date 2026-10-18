@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-/** Hora actual (HH:mm) en una zona horaria, actualizada cada 30 s. */
 export function useClock(timeZone: string): string {
   const [formatter] = useState(
     () => new Intl.DateTimeFormat('es-CL', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone }),

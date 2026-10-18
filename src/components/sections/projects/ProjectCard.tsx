@@ -37,7 +37,7 @@ export function ProjectCard({ project, reversed }: ProjectCardProps) {
         <Fade delay={280}>
           {href ? (
             <a className={styles.link} href={href} target="_blank" rel="noreferrer">
-              {t('projects.tryLive')} <span>↗</span>
+              {project.linkKind === 'repo' ? t('projects.viewRepo') : t('projects.tryLive')} <span>↗</span>
             </a>
           ) : (
             <span className={styles.linkPending}>{t('projects.repoSoon')}</span>

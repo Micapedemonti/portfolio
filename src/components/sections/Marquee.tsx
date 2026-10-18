@@ -5,7 +5,6 @@ import { lerp } from '@/lib/math';
 import { prefersReducedMotion } from '@/lib/media';
 import styles from './Marquee.module.css';
 
-/** Cinta infinita que acelera y cambia de dirección según el scroll. */
 export function Marquee() {
   const { t } = useTranslation();
   const trackRef = useRef<HTMLDivElement>(null);
@@ -22,7 +21,6 @@ export function Marquee() {
     s.vel = lerp(s.vel, Math.abs(dy), 0.1);
     s.x -= (0.6 + s.vel * 0.5) * s.dir;
 
-    // El contenido está duplicado: al recorrer la mitad, se vuelve al inicio sin salto visible
     const half = track.scrollWidth / 2;
     if (s.x < -half) s.x += half;
     if (s.x > 0) s.x -= half;

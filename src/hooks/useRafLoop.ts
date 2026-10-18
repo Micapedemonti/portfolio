@@ -1,9 +1,5 @@
 import { useEffect } from 'react';
 
-/**
- * Corre `tick` en cada frame mientras el componente está montado.
- * Pasar enabled=false lo apaga (por ejemplo, con movimiento reducido).
- */
 export function useRafLoop(tick: () => void, enabled = true): void {
   useEffect(() => {
     if (!enabled) return;

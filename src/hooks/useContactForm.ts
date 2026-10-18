@@ -5,7 +5,6 @@ import type { ContactErrors, ContactInput, ContactStatus } from '@/types/contact
 
 const EMPTY: ContactInput = { name: '', email: '', message: '', company: '' };
 
-/** Estado, validación y envío del formulario. El componente solo renderiza. */
 export function useContactForm() {
   const [values, setValues] = useState<ContactInput>(EMPTY);
   const [errors, setErrors] = useState<ContactErrors>({});

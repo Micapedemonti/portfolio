@@ -12,7 +12,6 @@
   --mono: 'DM Mono', monospace;
 }
 
-/* ---------- Reset ---------- */
 * { box-sizing: border-box; }
 html { background: var(--bg); scroll-behavior: smooth; }
 body {
@@ -29,12 +28,10 @@ button { font: inherit; background: none; border: 0; padding: 0; cursor: pointer
 :focus-visible { outline: 1px solid var(--acid); outline-offset: 4px; }
 ::selection { background: var(--acid); color: #111; }
 
-/* El cursor nativo solo se oculta cuando el cursor custom está montado */
 @media (hover: hover) and (pointer: fine) {
   html.has-cursor body, html.has-cursor a, html.has-cursor button { cursor: none; }
 }
 
-/* ---------- Revelados ---------- */
 .m { display: block; overflow: hidden; padding-bottom: .06em; margin-bottom: -.06em; }
 .m > span {
   display: block;
@@ -52,11 +49,9 @@ button { font: inherit; background: none; border: 0; padding: 0; cursor: pointer
 }
 .in .fade, .fade.in { opacity: 1; transform: none; }
 
-/* ---------- Piezas compartidas ---------- */
 .eyebrow { font: 10px var(--mono); letter-spacing: .16em; color: var(--acid); text-transform: uppercase; }
 .section { padding: clamp(76px, 10vw, 150px) var(--pad); }
 
-/* ---------- Keyframes compartidos ---------- */
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-18px) rotate(2deg); }
@@ -64,7 +59,6 @@ button { font: inherit; background: none; border: 0; padding: 0; cursor: pointer
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes blink { 50% { opacity: .35; } }
 
-/* ---------- Movimiento reducido ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .m > span, .fade { transform: none !important; transition: opacity .3s ease; }

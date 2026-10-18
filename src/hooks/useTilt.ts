@@ -1,7 +1,6 @@
 import { useEffect, type RefObject } from 'react';
 import { hasFinePointer, prefersReducedMotion } from '@/lib/media';
 
-/** Inclina `target` en 3D según la posición del puntero sobre `area`. */
 export function useTilt(
   area: RefObject<HTMLElement | null>,
   target: RefObject<HTMLElement | null>,

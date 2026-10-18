@@ -7,7 +7,6 @@ import { PatagoniaArt } from './PatagoniaArt';
 import { PortfolioArt } from './PortfolioArt';
 import { TeacherArt } from './TeacherArt';
 
-/** Registro de ilustraciones: agregar una variante = un archivo nuevo + una entrada aquí. */
 export const artVariants: Record<ProjectArtVariant, ComponentType<ArtProps>> = {
   teacher: TeacherArt,
   data: DataArt,

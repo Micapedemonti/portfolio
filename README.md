@@ -1,78 +1,62 @@
-# React + TypeScript + Vite
+# Portfolio · Micaela Pedemonti
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal de desarrolladora full stack. Sitio bilingüe (español / inglés) con animaciones hechas en CSS y un formulario de contacto que envía emails desde una función serverless.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **TypeScript** (modo estricto) con **React Compiler**
+- **Vite** para desarrollo y build
+- **i18next** para la traducción, con detección automática del idioma
+- **CSS Modules**, sin librerías de UI ni de animación
+- **Cloudflare Pages** para el hosting y **Pages Functions** para la API
+- **Resend** para enviar los emails del formulario de contacto
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Estructura
 
 ```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+src/
+  components/   effects, layout, sections y ui
+  data/         proyectos y stack (datos que no se traducen)
+  hooks/        lógica reutilizable (parallax, tilt, reveal, formulario...)
+  lib/          utilidades y validación compartida con el backend
+  locales/      textos en es.json y en.json
+  services/     llamadas a la API
+functions/
+  api/contact.ts   endpoint POST /api/contact
 ```
+
+La validación del formulario (`src/lib/contactValidation.ts`) es la misma en el front y en el servidor.
+
+## Desarrollo
+
+```bash
+npm install
+npm run dev       # solo el front, en http://localhost:5173
+npm run build     # chequeo de tipos + build a dist/
+npm run lint
+```
+
+Para probar el formulario de contacto en local hace falta levantar también la función con Wrangler:
+
+```bash
+npm run build
+npx wrangler pages dev dist
+```
+
+## Variables de entorno
+
+La función de contacto necesita estas variables. En local van en un archivo `.dev.vars`, que está en `.gitignore`; en producción se configuran en Cloudflare Pages.
+
+| Variable         | Descripción                                             |
+| ---------------- | ------------------------------------------------------- |
+| `RESEND_API_KEY` | API key de Resend                                       |
+| `CONTACT_TO`     | Email donde llegan los mensajes                         |
+| `CONTACT_FROM`   | Remitente verificado en Resend, ej. `Portfolio <contacto@tudominio.com>` |
+
+## Deploy
+
+En Cloudflare Pages, con el repo conectado:
+
+- Comando de build: `npm run build`
+- Directorio de salida: `dist`
+- La carpeta `functions/` se publica sola como Pages Functions.

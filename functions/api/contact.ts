@@ -1,12 +1,3 @@
-/**
- * Cloudflare Pages Function: POST /api/contact
- * Valida el mensaje con las mismas reglas del front y lo envía por email con Resend.
- *
- * Variables de entorno (configurar en Cloudflare Pages):
- *   RESEND_API_KEY  — API key de Resend
- *   CONTACT_TO      — casilla donde quieres recibir los mensajes
- *   CONTACT_FROM    — remitente verificado en Resend, ej: "Portfolio <contacto@micaela.dev>"
- */
 import { validateContact } from '../../src/lib/contactValidation';
 
 interface Env {
@@ -37,7 +28,6 @@ export async function onRequestPost({ request, env }: PagesContext): Promise<Res
   const result = validateContact(raw);
   if (!result.ok) return json({ errors: result.errors }, 422);
 
-  // Bot: responde OK sin enviar nada para no darle pistas
   if (result.data.company) return json({ ok: true });
 
   if (!env.RESEND_API_KEY || !env.CONTACT_TO || !env.CONTACT_FROM) {
@@ -59,7 +49,6 @@ export async function onRequestPost({ request, env }: PagesContext): Promise<Res
   });
 
   if (!res.ok) {
-    // Se ve en la terminal de wrangler y en los logs de Cloudflare; al cliente no se le expone el detalle
     console.error('Resend rechazó el envío', res.status, await res.text());
     return json({ error: 'No se pudo enviar el email' }, 502);
   }

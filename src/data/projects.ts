@@ -1,6 +1,5 @@
 import type { Project } from '@/types/project';
 
-/** Textos de cada proyecto: projects.items.<id> en src/locales/*.json */
 export const projects: readonly Project[] = [
   {
     id: 'miProfe',
@@ -9,6 +8,7 @@ export const projects: readonly Project[] = [
     status: 'live',
     art: 'teacher',
     href: 'https://miprofe.micaela.dev',
+    linkKind: 'live',
   },
   {
     id: 'licitaSimple',
@@ -17,6 +17,7 @@ export const projects: readonly Project[] = [
     status: 'live',
     art: 'data',
     href: 'https://licitasimple.micaela.dev',
+    linkKind: 'live',
   },
   {
     id: 'portfolio',
@@ -24,6 +25,7 @@ export const projects: readonly Project[] = [
     tags: ['REACT', 'TYPESCRIPT', 'I18N', 'CLAUDE', 'CLOUDFLARE'],
     status: 'live',
     art: 'portfolio',
-    href: null, // TODO: link al repo de GitHub
+    href: 'https://github.com/Micapedemonti/portfolio',
+    linkKind: 'repo',
   },
 ];

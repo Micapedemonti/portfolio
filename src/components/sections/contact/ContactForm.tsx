@@ -12,7 +12,6 @@ const FIELDS: ReadonlyArray<{ name: ContactField; type: 'text' | 'email' | 'text
   { name: 'message', type: 'textarea' },
 ];
 
-/** Formulario de contacto. La lógica vive en useContactForm; aquí solo UI. */
 export function ContactForm() {
   const { t } = useTranslation();
   const { values, errors, status, onChange, onSubmit } = useContactForm();
@@ -46,7 +45,6 @@ export function ContactForm() {
         );
       })}
 
-      {/* Honeypot anti-spam: invisible para personas */}
       <div className={styles.honeypot} aria-hidden="true">
         <label htmlFor="contact-company">{t('contact.form.company')}</label>
         <input id="contact-company" name="company" tabIndex={-1} autoComplete="off" value={values.company} onChange={onChange} />

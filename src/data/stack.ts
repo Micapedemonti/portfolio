@@ -1,6 +1,5 @@
 import type { StackItem } from '@/types/stack';
 
-/** Nombres de tecnologías (no se traducen). Las categorías viven en stack.* de src/locales. */
 export const stack: readonly StackItem[] = [
   { name: 'React', category: 'frontend' },
   { name: 'TypeScript', category: 'language' },

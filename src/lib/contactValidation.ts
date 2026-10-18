@@ -1,4 +1,3 @@
-// Import relativo a propósito: este archivo también lo usa functions/api/contact.ts, donde no existe el alias @.
 import type { ContactErrors, ContactInput } from '../types/contact';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -10,10 +9,6 @@ export type ContactValidation =
   | { ok: true; data: ContactInput }
   | { ok: false; errors: ContactErrors };
 
-/**
- * Validación pura: la usan el formulario y la función del servidor.
- * Devuelve códigos, no textos, para que cada idioma traduzca el mensaje.
- */
 export function validateContact(raw: Partial<Record<keyof ContactInput, unknown>>): ContactValidation {
   const data: ContactInput = {
     name: String(raw.name ?? '').trim(),

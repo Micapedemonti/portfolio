@@ -12,7 +12,6 @@ export const defaultResources = {
 
 export type Language = keyof typeof defaultResources;
 
-// Mantiene <html lang>, el <title> y la meta description en el idioma activo
 i18n.on('languageChanged', () => {
   const lng = i18n.resolvedLanguage ?? 'es';
   document.documentElement.lang = lng;
@@ -26,14 +25,13 @@ void i18n
   .init({
     resources: defaultResources,
     supportedLngs: ['es', 'en'],
-    load: 'languageOnly', // es-CL → es, en-US → en
+    load: 'languageOnly',
     fallbackLng: 'es',
     interpolation: {
-      escapeValue: false, // React ya escapa el contenido
+      escapeValue: false,
     },
   });
 
-// Tipado estricto de las keys: una key que no existe es error de TypeScript
 declare module 'i18next' {
   interface CustomTypeOptions {
     defaultNS: 'translation';

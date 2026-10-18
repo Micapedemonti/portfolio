@@ -10,7 +10,6 @@ interface PanelProps {
   children: ReactNode;
 }
 
-/** Ventana de "UI" flotante que se inclina con el puntero. */
 export function Panel({ ref, title, badge, rotate, box, children }: PanelProps) {
   return (
     <div ref={ref} className={styles.panel} style={{ ...box, ['--r' as string]: rotate } as CSSProperties}>

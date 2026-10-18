@@ -8,7 +8,6 @@ interface MaskProps {
   className?: string;
 }
 
-/** Línea de texto que sube desde una máscara al entrar en pantalla. */
 export function Mask({ children, delay = 0, className }: MaskProps) {
   const [ref, visible] = useReveal<HTMLSpanElement>();
   return (
