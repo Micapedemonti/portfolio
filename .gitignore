@@ -22,5 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.DS_Store
-.DS_Store
+
+# Variables locales de Cloudflare (API keys)
+.dev.vars
+
+# Caché local de Wrangler
+.wrangler

@@ -1,0 +1,11 @@
+.cursor {
+  position: fixed; z-index: 90; left: 0; top: 0; width: 10px; height: 10px; margin: -5px 0 0 -5px;
+  border-radius: 50%; background: var(--acid); pointer-events: none; mix-blend-mode: difference;
+  transition: width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease);
+  display: grid; place-items: center; will-change: transform;
+}
+.text { font: 9px var(--mono); letter-spacing: .12em; color: #111; opacity: 0; transition: opacity .2s ease; }
+.big { width: 52px; height: 52px; margin: -26px 0 0 -26px; }
+.label { width: 84px; height: 84px; margin: -42px 0 0 -42px; mix-blend-mode: normal; }
+.label .text { opacity: 1; }
+@media (hover: none), (pointer: coarse) { .cursor { display: none; } }

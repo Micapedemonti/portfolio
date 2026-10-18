@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "title": "Micaela Pedemonti — Full Stack Developer",
+    "description": "Micaela Pedemonti, full stack developer based in Viña del Mar, Chile. React, NestJS, microservices and AI agents."
+  },
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "label": "Main navigation"
+  },
+  "hero": {
+    "role": "FULL STACK DEVELOPER",
+    "location": "VIÑA DEL MAR / REMOTE",
+    "title": [
+      "HI,",
+      "I'M",
+      "MICAELA."
+    ],
+    "intro": "Full stack developer with three years of experience. I build web applications end to end, <strong>from React interfaces to NestJS APIs and microservice architectures</strong>, with a focus on maintainable code and systems that hold up in production.",
+    "cta": "View work",
+    "count": "PROJECTS"
+  },
+  "marquee": [
+    "AI AGENTS WITH TOOL USE",
+    "NESTJS · REACT · TYPESCRIPT",
+    "CI/CD & DOCKER"
+  ],
+  "projects": {
+    "eyebrow": "01 / SELECTED WORK",
+    "title": [
+      "Built for",
+      "real problems."
+    ],
+    "aside": "Personal projects, live online. Each one started from a concrete need.",
+    "status": {
+      "live": "LIVE",
+      "wip": "IN PROGRESS",
+      "landing": "LANDING"
+    },
+    "tryLive": "Try it live",
+    "repoSoon": "Repo coming soon",
+    "cursor": "TRY IT",
+    "items": {
+      "miProfe": {
+        "kicker": "LISTENING AGENT",
+        "title": [
+          "Mi profe",
+          "de inglés."
+        ],
+        "description": "I'm learning English, and even though I take classes, I needed a way to practice outside of them. That's how Mi profe was born: an app that uses an AI agent to generate English sentences, assess my listening comprehension and identify patterns in my mistakes. Instead of just correcting me, the system detects which areas I need to reinforce so it can guide my practice. The project also includes automated tests, Docker and a CI/CD pipeline that automates integration and deployment.",
+        "caption": "PROJECT 001 — AI AGENT",
+        "panel": {
+          "title": "SESSION · LISTENING",
+          "audio": "audio",
+          "typed": "you typed",
+          "insight": "→ reduced forms get lost"
+        }
+      },
+      "licitaSimple": {
+        "kicker": "PUBLIC TENDERS",
+        "title": [
+          "LicitaSimple."
+        ],
+        "description": "Small businesses can't read hundreds of tender documents on Chile's public procurement platform. LicitaSimple shows them <b>which tenders they can bid on based on what they do</b> and explains it in plain language, powered by an agent with a tool-use loop.",
+        "caption": "PROJECT 002 — AI AGENT",
+        "panel": {
+          "tenderKey": "tender",
+          "tender": "Green areas maintenance",
+          "verdictKey": "verdict",
+          "verdict": "apply",
+          "discardedKey": "discarded"
+        }
+      },
+      "portfolio": {
+        "kicker": "AI-ASSISTED DEVELOPMENT",
+        "title": [
+          "This",
+          "portfolio."
+        ],
+        "description": "This very site, <b>built with Claude</b>, Anthropic's AI. I gave it the instructions and a design skill, defined the stack and architecture, reviewed every change, and handled the deployment and domain.",
+        "caption": "PROJECT 003 — WITH AI",
+        "panel": {
+          "title": "BUILD LOG",
+          "design": "design",
+          "code": "code",
+          "deploy": "deploy",
+          "me": "me"
+        }
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "02 / ABOUT ME",
+    "title": [
+      "I learn",
+      "by <em>building</em>."
+    ],
+    "p1": "I'm from <b>Esquel</b>, a small town at the foot of the Andes in Argentina's Patagonia, and now live in <b>Viña del Mar</b>, Chile. I have three years of experience as a full stack developer and currently work on a team that builds and maintains <b>a platform built on microservices</b>.",
+    "p2": "Much of what I know I <b>taught myself</b>: when I don't understand something, I build a project to learn it. That's how Mi profe and LicitaSimple started. Both run on my own Oracle Cloud server, at a monthly cost close to zero.",
+    "p3": "At work I care about the how as much as the what: <b>I like to understand the underlying problem before writing a single line of code</b>. I value constant feedback, since it's what helps me improve the most, and I enjoy working as part of a team.",
+    "cta": "Let's connect",
+    "stackTitle": "03 / Tools of the trade",
+    "learning": "ALWAYS LEARNING"
+  },
+  "contact": {
+    "eyebrow": "04 / HAVE A PROJECT IN MIND?",
+    "title": [
+      "LET'S MAKE",
+      "IT REAL."
+    ],
+    "note": "Have an interesting project,<br/>an idea, or just want to talk?<br/>Remote or in the Valparaíso region.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me what you have in mind",
+      "company": "Company",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "sent": "Message sent! I'll get back to you soon.",
+      "failed": "Couldn't send it. Email me directly at {{email}}.",
+      "errors": {
+        "required": "This field is required.",
+        "invalidEmail": "That email doesn't look right.",
+        "tooShort": "Write at least {{min}} characters.",
+        "tooLong": "{{max}} characters max."
+      }
+    }
+  },
+  "footer": {
+    "built": "DESIGNED & BUILT BY ME"
+  },
+  "topbar": {
+    "cv": "CV",
+    "cvLabel": "Open my resume as PDF (new tab)"
+  },
+  "stack": {
+    "frontend": "FRONTEND",
+    "language": "LANGUAGE",
+    "backend": "BACKEND",
+    "runtime": "RUNTIME",
+    "database": "DATABASE",
+    "orm": "ORM",
+    "devops": "DEVOPS",
+    "deploy": "DEPLOY",
+    "cloud": "CLOUD",
+    "state": "STATE",
+    "agents": "AGENTS",
+    "hosting": "HOSTING"
+  }
+}

@@ -1,0 +1,17 @@
+.loader {
+  position: fixed; inset: 0; z-index: 100; background: var(--bg);
+  display: flex; flex-direction: column; justify-content: space-between; padding: var(--pad);
+  clip-path: inset(0 0 0 0); transition: clip-path 1000ms cubic-bezier(.77, 0, .175, 1);
+}
+.out { clip-path: inset(0 0 100% 0); }
+.top {
+  display: flex; justify-content: space-between;
+  font: 10px var(--mono); letter-spacing: .16em; color: var(--muted); text-transform: uppercase;
+}
+.count {
+  font: 600 clamp(90px, 20vw, 280px)/.8 'Space Grotesk';
+  letter-spacing: -.08em; font-variant-numeric: tabular-nums;
+}
+.count span { color: var(--acid); }
+.bar { height: 1px; background: var(--line); margin-top: 22px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--acid); transform-origin: left; transform: scaleX(0); }

@@ -1,0 +1,86 @@
+/* ---------- Fondos por variante ---------- */
+.bg { position: absolute; inset: -8%; transition: transform 1.1s var(--ease); will-change: transform; }
+.teacher { background: radial-gradient(ellipse at 50% 40%, #6545a8 0, transparent 30%), linear-gradient(140deg, #171321, #080808 70%); }
+.data { background: radial-gradient(ellipse at 50% 45%, rgba(255,107,43,.3), transparent 35%), linear-gradient(135deg, #111, #1a1613 60%, #050505); }
+.bill { background: radial-gradient(ellipse at 40% 40%, rgba(255,207,107,.22), transparent 40%), linear-gradient(150deg, #14120b, #080808 70%); }
+.patagonia { background: linear-gradient(180deg, #0b1420 0%, #16263a 45%, #1d2f45 60%, #0b0f15 100%); }
+
+/* ---------- Panel flotante con inclinación 3D ---------- */
+.panel {
+  position: absolute; left: 12%; top: 18%; width: 72%; height: 64%; padding: 18px;
+  border: 1px solid rgba(255,255,255,.25); background: rgba(9,9,12,.56);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 20px 80px #0008;
+  transform: perspective(900px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg)) rotate(var(--r, -5deg));
+  transition: transform .7s var(--ease); will-change: transform;
+}
+.uiTop { display: flex; justify-content: space-between; border-bottom: 1px solid #ffffff25; padding-bottom: 10px; font: 9px var(--mono); color: #bdbbc8; }
+.uiBody { font: 10px/2 var(--mono); color: #b9b4ac; margin-top: 12px; }
+.uiBody b { color: #fff; font-weight: 400; }
+.acid { color: var(--acid); }
+.warn { color: var(--wip); }
+.live { color: var(--live); }
+.row { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed #ffffff18; }
+
+/* ---------- Profe de inglés: esfera con anillo ---------- */
+.teacherOrb {
+  position: absolute; width: 200px; aspect-ratio: 1; border-radius: 50%; left: calc(50% - 100px); top: calc(50% - 130px);
+  background: radial-gradient(circle at 30% 25%, #f0d7ff, #9e67ed 14%, #30204e 44%, #080808 70%);
+  box-shadow: inset -20px -20px 40px #000, 0 0 70px #8954ff3b; animation: float 7s ease-in-out infinite;
+}
+.teacherOrb::after {
+  content: ''; position: absolute; inset: -22px; border: 1px solid #b994ff88; border-radius: 50%;
+  transform: rotateX(68deg) rotateZ(-30deg);
+}
+
+/* ---------- LicitaIA: cristal recortado con clip-path ---------- */
+.crystal {
+  position: absolute; left: 14%; top: 18%; width: 34%; height: 58%;
+  background: linear-gradient(130deg, #fff7d5, #e3a26b 12%, #422e27 27%, #ff7a32 38%, #15110f 55%, #ffd29d 67%, #37251b 80%);
+  clip-path: polygon(50% 0, 100% 26%, 83% 73%, 52% 100%, 10% 78%, 0 33%);
+  filter: drop-shadow(0 0 30px #ff7a3255); transform: rotate(15deg); transition: transform .8s var(--ease);
+}
+
+/* ---------- Boletas: ampolleta ---------- */
+.bulb {
+  position: absolute; left: 58%; top: 12%; width: 120px; height: 120px; border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #fff6d6, #ffcf6b 35%, #7a5410 75%);
+  box-shadow: 0 0 90px rgba(255,207,107,.35); animation: float 9s ease-in-out infinite;
+}
+
+/* ---------- Patagonia: luna y tres capas de cerros ---------- */
+.moon {
+  position: absolute; width: 56px; height: 56px; border-radius: 50%; right: 18%; top: 14%;
+  background: radial-gradient(circle at 35% 35%, #fff, #d8e3f0 60%, #a8b8cc); box-shadow: 0 0 60px rgba(216,227,240,.35);
+}
+.mountains { position: absolute; left: -10%; right: -10%; bottom: 0; height: 70%; }
+.mountains i { position: absolute; inset: 0; display: block; }
+.mountains i:nth-child(1) {
+  background: linear-gradient(180deg, #5a7598, #22344d);
+  clip-path: polygon(0 70%, 12% 42%, 20% 55%, 32% 22%, 42% 48%, 52% 30%, 63% 52%, 74% 18%, 86% 46%, 100% 34%, 100% 100%, 0 100%);
+}
+.mountains i:nth-child(2) {
+  background: linear-gradient(180deg, #e9eef5 0, #e9eef5 8%, #5b708f 9%, #22324a 60%); opacity: .95;
+  clip-path: polygon(0 85%, 10% 62%, 22% 75%, 34% 40%, 46% 68%, 58% 52%, 70% 74%, 82% 50%, 94% 70%, 100% 62%, 100% 100%, 0 100%);
+}
+.mountains i:nth-child(3) {
+  background: #0b0f15;
+  clip-path: polygon(0 92%, 15% 82%, 30% 90%, 45% 80%, 60% 88%, 75% 79%, 90% 88%, 100% 84%, 100% 100%, 0 100%);
+}
+
+@media (prefers-reduced-motion: reduce) { .teacherOrb, .bulb { animation: none; } }
+
+/* ---------- Portfolio: mini versión del orb del hero ---------- */
+.portfolio { background: radial-gradient(ellipse at 30% 35%, rgba(117,85,255,.28), transparent 40%), radial-gradient(ellipse at 75% 75%, rgba(214,255,63,.10), transparent 35%), linear-gradient(140deg, #0e0d14, #080808 70%); }
+.miniOrb {
+  position: absolute; width: 170px; aspect-ratio: 1; left: 12%; top: 12%;
+  border-radius: 43% 57% 62% 38% / 44% 40% 60% 56%;
+  background:
+    radial-gradient(ellipse at 30% 25%, #fff 0, rgba(210,220,235,.85) 5%, transparent 18%),
+    radial-gradient(ellipse at 68% 30%, rgba(110,255,225,.9), transparent 22%),
+    radial-gradient(ellipse at 45% 70%, rgba(143,93,255,.95), transparent 32%),
+    conic-gradient(from 45deg, #24252b, #b7c0ce, #101014, #f4f5f7, #4d315f, #101010, #9de6ff, #171717);
+  filter: contrast(1.3) brightness(1.2) saturate(1.3);
+  box-shadow: inset -18px -22px 40px #000, inset 10px 10px 22px rgba(255,255,255,.35);
+  animation: float 8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) { .miniOrb { animation: none; } }

@@ -1,0 +1,25 @@
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 32px; margin-top: 72px; max-width: 900px; }
+.full { grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; gap: 10px; }
+.label { font: 10px var(--mono); letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+.input {
+  font: inherit; font-size: 16px; color: var(--fg); background: transparent; border: 0;
+  border-bottom: 1px solid var(--line); padding: 8px 0 12px; border-radius: 0; transition: border-color .25s;
+}
+.input:focus { outline: none; border-color: var(--acid); }
+.input::placeholder { color: #55554f; }
+textarea.input { resize: vertical; min-height: 110px; line-height: 1.6; }
+.invalid { border-color: #ff7a6b; }
+.error { font: 10px var(--mono); color: #ff7a6b; letter-spacing: .06em; }
+.honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.submit {
+  display: inline-flex; align-items: center; gap: 18px; font: 10px var(--mono); letter-spacing: .12em; text-transform: uppercase;
+  border: 1px solid var(--acid); color: var(--acid); padding: 14px 20px; transition: background .25s, color .25s;
+}
+.submit:hover:not(:disabled) { background: var(--acid); color: #111; }
+.submit:disabled { opacity: .5; }
+.status { font: 10px var(--mono); letter-spacing: .08em; color: var(--muted); }
+.sent { color: var(--live); }
+.failed { color: #ff7a6b; }
+@media (max-width: 760px) { .form { grid-template-columns: 1fr; margin-top: 48px; } }

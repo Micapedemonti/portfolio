@@ -1,0 +1,10 @@
+.marquee {
+  overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 17px 0; white-space: nowrap;
+}
+.track {
+  display: flex; width: max-content; font: 11px var(--mono); letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted); will-change: transform;
+}
+.track span { padding: 0 26px; }
+.track b { color: var(--acid); font-weight: 400; display: inline-block; margin-left: 26px; }

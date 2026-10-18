@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "title": "Micaela Pedemonti — Desarrolladora Full Stack",
+    "description": "Micaela Pedemonti, desarrolladora full stack en Viña del Mar. React, NestJS, microservicios y agentes de IA."
+  },
+  "nav": {
+    "home": "Inicio",
+    "work": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "label": "Navegación principal"
+  },
+  "hero": {
+    "role": "DESARROLLADORA FULL STACK",
+    "location": "VIÑA DEL MAR / REMOTO",
+    "title": [
+      "HOLA,",
+      "SOY",
+      "MICAELA."
+    ],
+    "intro": "Desarrolladora full stack con tres años de experiencia. Construyo aplicaciones web de punta a punta: <strong>interfaces en React, APIs en NestJS y arquitecturas de microservicios</strong>, con foco en código mantenible y sistemas que funcionan en producción.",
+    "cta": "Ver proyectos",
+    "count": "PROYECTOS"
+  },
+  "marquee": [
+    "AGENTES DE IA CON TOOL USE",
+    "NESTJS · REACT · TYPESCRIPT",
+    "CI/CD Y DOCKER"
+  ],
+  "projects": {
+    "eyebrow": "01 / PROYECTOS",
+    "title": [
+      "Hechos para",
+      "problemas reales."
+    ],
+    "aside": "Proyectos propios, en línea. Cada uno nace de una necesidad concreta.",
+    "status": {
+      "live": "EN LÍNEA",
+      "wip": "EN CONSTRUCCIÓN",
+      "landing": "LANDING"
+    },
+    "tryLive": "Ver en vivo",
+    "repoSoon": "Repo pronto",
+    "cursor": "PROBAR",
+    "items": {
+      "miProfe": {
+        "kicker": "AGENTE DE LISTENING",
+        "title": [
+          "Mi profe",
+          "de inglés."
+        ],
+        "description": "Estoy aprendiendo inglés y, aunque tomo clases, necesitaba una forma de practicar fuera de ellas. Así nació Mi profe, una aplicación que utiliza un agente de IA para generar frases en inglés, evaluar mi comprensión auditiva e identificar patrones en mis errores. En lugar de limitarse a corregirme, el sistema detecta qué aspectos necesito reforzar para orientar la práctica. El proyecto también incluye tests automatizados, Docker y un flujo de CI/CD para automatizar la integración y el despliegue.",
+        "caption": "PROYECTO 001 — AGENTE DE IA",
+        "panel": {
+          "title": "SESIÓN · LISTENING",
+          "audio": "audio",
+          "typed": "escribiste",
+          "insight": "→ se pierden las formas reducidas"
+        }
+      },
+      "licitaSimple": {
+        "kicker": "LICITACIONES PÚBLICAS",
+        "title": [
+          "LicitaSimple."
+        ],
+        "description": "Revisar cientos de bases en Mercado Público no es viable para una pyme. LicitaSimple le muestra <b>a qué licitaciones puede postular según lo que hace</b> y se lo explica en simple, con un agente que usa un loop de herramientas.",
+        "caption": "PROYECTO 002 — AGENTE DE IA",
+        "panel": {
+          "tenderKey": "licitacion",
+          "tender": "Mantención áreas verdes",
+          "verdictKey": "veredicto",
+          "verdict": "postular",
+          "discardedKey": "descartadas"
+        }
+      },
+      "portfolio": {
+        "kicker": "DESARROLLO ASISTIDO POR IA",
+        "title": [
+          "Este",
+          "portfolio."
+        ],
+        "description": "Este mismo sitio, <b>desarrollado con Claude</b>, la IA de Anthropic. Yo le di las instrucciones y una skill para el diseño, definí el stack y la arquitectura, revisé cada cambio y me encargué del deploy y del dominio.",
+        "caption": "PROYECTO 003 — CON IA",
+        "panel": {
+          "title": "BUILD LOG",
+          "design": "diseño",
+          "code": "código",
+          "deploy": "deploy",
+          "me": "yo"
+        }
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "02 / SOBRE MÍ",
+    "title": [
+      "Aprendo",
+      "<em>construyendo</em>."
+    ],
+    "p1": "Soy argentina, de <b>Esquel</b>, un pueblo al pie de la cordillera en Chubut, y hoy vivo en <b>Viña del Mar</b>. Tengo tres años de experiencia como desarrolladora full stack y actualmente formo parte de un equipo que desarrolla y mantiene <b>una plataforma basada en microservicios</b>.",
+    "p2": "Buena parte de lo que sé lo aprendí <b>por mi cuenta</b>: cuando algo no lo entiendo, construyo un proyecto para aprenderlo. Así nacieron Mi profe y LicitaSimple, que corren en mi propio servidor en Oracle Cloud con un costo mensual cercano a cero.",
+    "p3": "En el trabajo me importa tanto el cómo como el qué: <b>me gusta entender el problema de fondo antes de escribir una línea de código</b>. Valoro mucho el feedback constante, porque es lo que más me ayuda a mejorar, y disfruto trabajar en equipo.",
+    "cta": "Hablemos",
+    "stackTitle": "03 / Herramientas",
+    "learning": "SIEMPRE APRENDIENDO"
+  },
+  "contact": {
+    "eyebrow": "04 / ¿TIENES UN PROYECTO EN MENTE?",
+    "title": [
+      "HAGÁMOSLO",
+      "REALIDAD."
+    ],
+    "note": "¿Tienes un proyecto interesante,<br/>una idea o quieres conversar?<br/>Remoto o en la región de Valparaíso.",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame en qué estás pensando",
+      "company": "Empresa",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "sent": "¡Mensaje enviado! Te respondo pronto.",
+      "failed": "No se pudo enviar. Escríbeme directo a {{email}}.",
+      "errors": {
+        "required": "Este campo es obligatorio.",
+        "invalidEmail": "Ese email no parece válido.",
+        "tooShort": "Escribe al menos {{min}} caracteres.",
+        "tooLong": "Máximo {{max}} caracteres."
+      }
+    }
+  },
+  "footer": {
+    "built": "DISEÑADO Y DESARROLLADO POR MÍ"
+  },
+  "topbar": {
+    "cv": "CV",
+    "cvLabel": "Abrir mi CV en PDF (pestaña nueva)"
+  },
+  "stack": {
+    "frontend": "FRONTEND",
+    "language": "LENGUAJE",
+    "backend": "BACKEND",
+    "runtime": "RUNTIME",
+    "database": "BASE DE DATOS",
+    "orm": "ORM",
+    "devops": "DEVOPS",
+    "deploy": "DEPLOY",
+    "cloud": "CLOUD",
+    "state": "ESTADO",
+    "agents": "AGENTES",
+    "hosting": "HOSTING"
+  }
+}

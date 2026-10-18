@@ -1,0 +1,9 @@
+.projects { padding-top: 30px; }
+.head { display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; margin-bottom: 48px; }
+.title { font-size: clamp(42px, 7vw, 100px); line-height: .92; letter-spacing: -.07em; font-weight: 500; margin: 20px 0 0; }
+.aside { max-width: 240px; color: var(--muted); font-size: 12px; line-height: 1.6; margin-top: 8px; }
+@media (max-width: 760px) {
+  .head { flex-direction: column; margin-bottom: 28px; }
+  .aside { max-width: 340px; }
+}
+@media (max-width: 430px) { .title { font-size: 48px; } }

@@ -1,0 +1,16 @@
+.frame {
+  height: clamp(270px, 38vw, 510px); position: relative; overflow: hidden; background: #111; isolation: isolate;
+  clip-path: inset(12% 12% 12% 12%); transition: clip-path 1.4s var(--expo);
+}
+.revealed { clip-path: inset(0 0 0 0); }
+.clickable { cursor: pointer; }
+.frame:hover > div:first-child { transform: scale(1.05); }
+.frame:hover [data-art="crystal"] { transform: rotate(25deg) scale(1.08); }
+
+.tag { position: absolute; left: 18px; top: 18px; font: 9px var(--mono); letter-spacing: .12em; background: var(--acid); color: #111; padding: 7px 9px; z-index: 3; }
+.live { background: var(--live); }
+.wip { background: var(--wip); }
+.caption { position: absolute; right: 18px; bottom: 14px; font: 10px var(--mono); color: #fff9; z-index: 3; }
+
+@media (max-width: 760px) { .frame { height: 72vw; min-height: 250px; max-height: 430px; } }
+@media (prefers-reduced-motion: reduce) { .frame { clip-path: none; transition: none; } }

@@ -1,0 +1,15 @@
+.about { background: #11110f; position: relative; overflow: hidden; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 9vw, 140px); align-items: start; }
+.big { font-size: clamp(35px, 5.2vw, 72px); letter-spacing: -.065em; line-height: 1.02; margin: 22px 0 30px; font-weight: 500; }
+.big em { font-style: normal; color: var(--acid); }
+.text { font-size: 14px; line-height: 1.8; color: #aaa9a3; max-width: 460px; }
+.text b { color: var(--fg); font-weight: 500; }
+.stackTitle { font: 10px var(--mono); letter-spacing: .16em; color: var(--muted); text-transform: uppercase; margin-bottom: 24px; }
+.principle {
+  border-top: 1px solid var(--line); margin-top: 70px; padding-top: 20px; display: flex; justify-content: space-between;
+  gap: 20px; font: 10px var(--mono); color: var(--muted); letter-spacing: .08em;
+}
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; gap: 55px; }
+  .principle { margin-top: 48px; flex-direction: column; }
+}

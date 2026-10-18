@@ -1,0 +1,71 @@
+:root {
+  --bg: #080808;
+  --fg: #f1f0eb;
+  --muted: #93938e;
+  --line: rgba(255, 255, 255, .16);
+  --acid: #d6ff3f;
+  --live: #7cf2b8;
+  --wip: #ffcf6b;
+  --pad: clamp(20px, 4vw, 64px);
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --expo: cubic-bezier(.16, 1, .3, 1);
+  --mono: 'DM Mono', monospace;
+}
+
+/* ---------- Reset ---------- */
+* { box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+body.loading { overflow: hidden; }
+a, button { color: inherit; }
+a { text-decoration: none; }
+button { font: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+:focus-visible { outline: 1px solid var(--acid); outline-offset: 4px; }
+::selection { background: var(--acid); color: #111; }
+
+/* El cursor nativo solo se oculta cuando el cursor custom está montado */
+@media (hover: hover) and (pointer: fine) {
+  html.has-cursor body, html.has-cursor a, html.has-cursor button { cursor: none; }
+}
+
+/* ---------- Revelados ---------- */
+.m { display: block; overflow: hidden; padding-bottom: .06em; margin-bottom: -.06em; }
+.m > span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 1.2s var(--expo);
+  transition-delay: var(--d, 0ms);
+}
+.in .m > span, .m.in > span { transform: none; }
+
+.fade {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .9s ease, transform 1.1s var(--expo);
+  transition-delay: var(--d, 0ms);
+}
+.in .fade, .fade.in { opacity: 1; transform: none; }
+
+/* ---------- Piezas compartidas ---------- */
+.eyebrow { font: 10px var(--mono); letter-spacing: .16em; color: var(--acid); text-transform: uppercase; }
+.section { padding: clamp(76px, 10vw, 150px) var(--pad); }
+
+/* ---------- Keyframes compartidos ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(2deg); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes blink { 50% { opacity: .35; } }
+
+/* ---------- Movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .m > span, .fade { transform: none !important; transition: opacity .3s ease; }
+}

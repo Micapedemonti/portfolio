@@ -1,0 +1,9 @@
+.cta {
+  display: inline-flex; align-items: center; gap: 22px; margin-top: 24px;
+  font: 10px var(--mono); letter-spacing: .12em; text-transform: uppercase;
+  border-bottom: 1px solid var(--line); padding: 0 0 12px;
+  transition: color .25s, border-color .25s;
+}
+.cta:hover { color: var(--acid); border-color: var(--acid); }
+.arrow { font-size: 22px; line-height: 10px; transition: transform .3s var(--ease); }
+.cta:hover .arrow { transform: translate(5px, -3px); }
